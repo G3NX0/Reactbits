@@ -1,0 +1,14 @@
+.electric-border { position: relative; border-radius: .9rem; }
+.electric-border .eb-content { position: relative; z-index: 1; background: var(--panel); border-radius: inherit; padding: 1rem; }
+.electric-border .eb-svg { position: absolute; width: 0; height: 0; overflow: hidden; }
+.electric-border .eb-layers { position: absolute; inset: 0; pointer-events: none; border-radius: inherit; z-index: 2; }
+.electric-border .eb-stroke { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; }
+.electric-border .eb-stroke--color { border: var(--eb-border-width, 2px) solid var(--electric-border-color, #5227FF); box-shadow: 0 0 10px 2px var(--electric-border-color, #5227FF); }
+.electric-border .eb-stroke--core { border: 1px solid rgba(255,255,255,.9); box-shadow: 0 0 6px rgba(255,255,255,.8); mix-blend-mode: screen; }
+.electric-border .eb-glow-1 { position: absolute; inset: -3px; border-radius: inherit; box-shadow: 0 0 18px 6px color-mix(in srgb, var(--electric-border-color, #5227FF) 70%, transparent); opacity: .9; }
+.electric-border .eb-glow-2 { position: absolute; inset: -10px; border-radius: inherit; box-shadow: 0 0 60px 20px color-mix(in srgb, var(--electric-border-color, #5227FF) 40%, transparent); opacity: .7; }
+.electric-border .eb-background-glow { position: absolute; inset: 2px; border-radius: inherit; box-shadow: 0 0 60px 10px color-mix(in srgb, var(--electric-border-color, #5227FF) 15%, transparent) inset; opacity: .25; }
+
+@supports not (color-mix(in srgb, red, blue)) {
+  .electric-border .eb-glow-1, .electric-border .eb-glow-2, .electric-border .eb-background-glow { box-shadow: none; }
+}

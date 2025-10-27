@@ -1,0 +1,32 @@
+export { Typewriter as TypingText } from '../components/Typewriter';
+export { SplitText as SplittingText } from '../components/SplitText';
+export { default as useDebounce } from '../hooks/useDebounce';
+
+export { default as WritingText } from './writing/WritingText';
+export { default as RotatingText } from './words/RotatingText';
+export { default as RollingText } from './words/RollingText';
+export { default as HighlightText } from './decor/HighlightText';
+export { default as GradientText } from './decor/GradientText';
+export { default as ShimmerText } from './decor/ShimmerText';
+export { default as ColorfulText } from './decor/ColorfulText';
+export { default as TextGenerate } from './words/TextGenerate';
+export { default as FlipWords } from './words/FlipWords';
+export { default as HoverText } from './decor/HoverText';
+export { default as ContainerFlip } from './container/ContainerFlip';
+export { default as RevealText } from './words/RevealText';
+export { default as LineShadowText } from './decor/LineShadowText';
+export { default as ProximityText } from './interactive/ProximityText';
+export { default as ScrollVelocityText } from './interactive/ScrollVelocityText';
+export { default as GlitchText } from './decor/GlitchText';
+export { default as CircularText } from './shapes/CircularText';
+export { default as PressureText } from './interactive/PressureText';
+export { default as CurvedLoopText } from './shapes/CurvedLoopText';
+export { default as FuzzyText } from './decor/FuzzyText';
+export { default as TextTrail } from './decor/TextTrail';
+export { default as CursorText } from './words/CursorText';
+export { default as DecryptedText } from './words/DecryptedText';
+export { default as TrueFocusText } from './decor/TrueFocusText';
+export { default as ScrambledText } from './words/ScrambledText';
+
+export { default as CountUp } from './numbers/CountUp';
+export { default as SlideNumber } from './numbers/SlideNumber';

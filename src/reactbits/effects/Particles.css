@@ -1,0 +1,10 @@
+.particles-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure main content is above */
+/* The container wrapper gets z-index in index.css update. */
+

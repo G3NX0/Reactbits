@@ -1,0 +1,21 @@
+.logoloop {
+  position: relative;
+  overflow: hidden;
+  border-radius: .8rem;
+}
+.logoloop__track { display: flex; will-change: transform; }
+.logoloop__list { display: flex; align-items: center; gap: var(--logoloop-gap, 32px); list-style: none; padding: 0; margin: 0; }
+.logoloop__item { display: flex; align-items: center; justify-content: center; }
+.logoloop__item img { height: var(--logoloop-logoHeight, 28px); width: auto; filter: grayscale(30%); opacity: .9; }
+.logoloop__node { display: inline-flex; align-items: center; justify-content: center; font-size: calc(var(--logoloop-logoHeight,28px) * .9); height: var(--logoloop-logoHeight,28px); line-height: 1; color: #cbd5e1; }
+.logoloop__link { display: inline-flex; align-items: center; justify-content: center; }
+
+/* Scale on hover */
+.logoloop--scale-hover .logoloop__item > * { transition: transform .2s ease, opacity .2s ease, filter .2s ease; }
+.logoloop--scale-hover .logoloop__item:hover > * { transform: scale(1.08); opacity: 1; filter: none; }
+
+/* Fade edges */
+.logoloop--fade::before, .logoloop--fade::after { content: ''; position: absolute; top: 0; bottom: 0; width: 80px; pointer-events: none; z-index: 2; }
+.logoloop--fade::before { left: 0; background: linear-gradient(90deg, var(--logoloop-fadeColor, var(--bg)) 0%, transparent 80%); }
+.logoloop--fade::after { right: 0; background: linear-gradient(270deg, var(--logoloop-fadeColor, var(--bg)) 0%, transparent 80%); }
+
